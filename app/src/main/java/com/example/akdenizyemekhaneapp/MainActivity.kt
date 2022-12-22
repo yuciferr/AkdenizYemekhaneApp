@@ -2,6 +2,7 @@ package com.example.akdenizyemekhaneapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.navigation.*
 import androidx.navigation.ui.setupWithNavController
@@ -21,5 +22,15 @@ class MainActivity : AppCompatActivity() {
 
         //disable night mode
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+
+        navController.addOnDestinationChangedListener{ _, destination, _ ->
+            if(destination.id == R.id.loginFragment) {
+
+                bottomNavigationView.visibility = View.GONE
+            } else {
+
+                bottomNavigationView.visibility = View.VISIBLE
+            }
+        }
     }
 }
