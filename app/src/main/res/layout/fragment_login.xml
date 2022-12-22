@@ -41,8 +41,8 @@
         android:background="@drawable/default_btn"
         android:ems="10"
         android:fontFamily="sans-serif"
+        android:hint="Student ID"
         android:inputType="textPersonName"
-        android:text="Student ID"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -56,17 +56,17 @@
         android:layout_width="350dp"
         android:layout_height="60dp"
         android:layout_marginTop="30dp"
+        android:background="@drawable/default_btn"
         android:ems="10"
+        android:hint="Password"
         android:inputType="textPersonName"
-        android:text="Password"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/studentNumber"
-        android:background="@drawable/default_btn"/>
+        app:layout_constraintTop_toBottomOf="@+id/studentNumber" />
 
     <Button
         android:id="@+id/loginButton"
