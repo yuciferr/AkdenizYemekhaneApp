@@ -29,18 +29,28 @@ class MapFragment : Fragment() {
 
         items = listOf(
             MapItem(R.drawable.merkezi, "Merkezi Yemekhane", 80,
-                "Open Hours: \\n11:15 - 14:15 / 16:15 - 18:15"),
+                "Open Hours: \n11:15 - 14:15 / 16:15 - 18:15"),
             MapItem(R.drawable.ilahi, "İlahiyat Yemekhanesi", 40,
-                "Open Hours: \\n11:15 - 14:15 / 16:15 - 18:15"),
+                "Open Hours: \n11:15 - 14:15 / 16:15 - 18:15"),
             MapItem(R.drawable.dis, "Diş Yemekhanesi", 30,
-                "Open Hours: \\n11:15 - 14:15 / 16:15 - 18:15"),
+                "Open Hours: \n11:15 - 14:15 / 16:15 - 18:15"),
             MapItem(R.drawable.merkezi, "Yakut Yemekhanesi", 65,
-                "Open Hours: \\n11:15 - 14:15 / 16:15 - 18:15")
+                "Open Hours: \n11:15 - 14:15 / 16:15 - 18:15")
         )
 
         adapter = MapRecyclerAdapter(items)
         binding.recyclerView.adapter = adapter
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
+
+        binding.toggleView.setOnClickListener{
+            if (binding.toggleView.isChecked){
+                binding.recyclerView.visibility = View.GONE
+                binding.cardView.visibility = View.VISIBLE
+            } else {
+                binding.recyclerView.visibility = View.VISIBLE
+                binding.cardView.visibility = View.GONE
+            }
+        }
     }
 
 }
