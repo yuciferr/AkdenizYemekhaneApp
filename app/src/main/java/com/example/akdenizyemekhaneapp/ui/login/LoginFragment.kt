@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.example.akdenizyemekhaneapp.R
@@ -26,17 +27,24 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.loginButton.setOnClickListener {
-            if(binding.studentNumber.text.toString().isNotEmpty() &&
-                    binding.password.text.toString().isNotEmpty()){
+            if(binding.studentNumber.text.toString().isEmpty()){
+                binding.studentNumber.error = "Enter your student number"
+            }
+            else if(binding.password.text.toString().isEmpty()){
+                binding.password.error = "Enter your password"
+            }
+            else{
                 navigateToHome()
             }
         }
 
         binding.guestButton.setOnClickListener {
+            Toast.makeText(context, "You are logged in as a guest", Toast.LENGTH_LONG).show()
             navigateToHome()
         }
 
         binding.closeButton.setOnClickListener{
+            Toast.makeText(context, "You are logged in as a guest", Toast.LENGTH_LONG).show()
             navigateToHome()
         }
     }
