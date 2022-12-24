@@ -36,18 +36,10 @@
         android:id="@+id/feedFragment"
         android:name="com.example.akdenizyemekhaneapp.ui.feed.FeedFragment"
         android:label="fragment_feed"
-        tools:layout="@layout/fragment_feed" >
-        <action
-            android:id="@+id/action_feedFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_feed" />
     <fragment
         android:id="@+id/mapFragment"
         android:name="com.example.akdenizyemekhaneapp.ui.map.MapFragment"
         android:label="fragment_map"
-        tools:layout="@layout/fragment_map" >
-        <action
-            android:id="@+id/action_mapFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_map" />
 </navigation>

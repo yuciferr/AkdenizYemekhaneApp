@@ -2,7 +2,9 @@ package com.example.akdenizyemekhaneapp.ui.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
+import com.example.akdenizyemekhaneapp.R
 import com.example.akdenizyemekhaneapp.databinding.RvHomeItemBinding
 
 class HomeRecyclerAdapter(private val items: ArrayList<HomeItem>): RecyclerView.Adapter<HomeRecyclerAdapter.ViewHolder>() {
@@ -27,6 +29,10 @@ class HomeRecyclerAdapter(private val items: ArrayList<HomeItem>): RecyclerView.
             foodImage3.setImageResource(items[position].foodImg3)
             foodTitle4.text = items[position].foodName4
             foodImage4.setImageResource(items[position].foodImg4)
+
+            root.setOnClickListener {
+                Navigation.findNavController(holder.binding.root).navigate(R.id.action_homeFragment_to_detailFragment)
+            }
         }
     }
 
