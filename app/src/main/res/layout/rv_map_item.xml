@@ -29,6 +29,7 @@
                 android:id="@+id/mapImage"
                 android:layout_width="141dp"
                 android:layout_height="141dp"
+                android:scaleType="centerCrop"
                 tools:srcCompat="@tools:sample/avatars" />
         </androidx.cardview.widget.CardView>
 
@@ -75,7 +76,7 @@
                 android:background="#00AA7676"
                 android:minHeight="40dp"
                 android:progress="75"
-                android:progressTint="#57000000"
+                android:progressTint="@color/red"
                 android:scrollbarSize="20dp"
                 android:secondaryProgressTint="#FFFFFF" />
         </androidx.cardview.widget.CardView>

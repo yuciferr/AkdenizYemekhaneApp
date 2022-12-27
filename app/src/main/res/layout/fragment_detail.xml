@@ -10,73 +10,66 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/detailRecyclerView"
-        android:layout_width="321dp"
-        android:layout_height="363dp"
-        android:layout_marginBottom="178dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/rateButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.222"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/leftIcon"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/detailedInfo" />
 
     <TextView
         android:id="@+id/detailedInfo"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="5dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="4dp"
         android:text="Detailed Info"
         android:textColor="#000000"
         android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/leftIcon"
+        app:layout_constraintStart_toEndOf="@+id/leftIcon"
+        app:layout_constraintTop_toTopOf="@+id/leftIcon" />
 
     <ImageView
         android:id="@+id/leftIcon"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="75dp"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:src="@drawable/ic_round_arrow_back_24"
-        app:layout_constraintBottom_toTopOf="@+id/mercimek"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/rateButton"
         android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="30dp"
-        android:background="#A5A5A5"
-        android:backgroundTint="#A5A5A5"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/default_btn"
         android:text="Rate"
         android:textColor="#000000"
         android:textSize="20sp"
-        app:iconTint="#BAA9A9"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/backButton"
-        app:layout_constraintHorizontal_bias="0.16"
-        app:layout_constraintStart_toStartOf="parent"
-        app:rippleColor="#8A7E7E" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/backButton"
         android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="30dp"
-        android:background="#A5A5A5"
-        android:backgroundTint="#A5A5A5"
+        android:layout_height="wrap_content"
+        android:background="@drawable/default_btn"
         android:text="Back"
         android:textColor="#000000"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/rateButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/rateButton" />
-
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/rateButton"
+        app:layout_constraintTop_toTopOf="@+id/rateButton" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

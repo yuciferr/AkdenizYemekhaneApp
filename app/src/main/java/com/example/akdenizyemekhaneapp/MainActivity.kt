@@ -28,9 +28,9 @@ class MainActivity : AppCompatActivity() {
         //disable night mode
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
-        //hide bottom navigation bar
+        //hide bottom navigation bar for login and detail fragments
         navController.addOnDestinationChangedListener{ _, destination, _ ->
-            if(destination.id == R.id.loginFragment) {
+            if(destination.id == R.id.loginFragment || destination.id == R.id.detailFragment) {
 
                 bottomNavigationView.visibility = View.GONE
             } else {

@@ -4,10 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="30dp"
-    android:layout_marginRight="30dp"
-    android:background="#CACACA"
-    android:backgroundTint="#CACACA"
+    android:layout_margin="4dp"
+    android:backgroundTint="@color/grey"
     app:cardCornerRadius="20dp"
     app:layout_constraintCircleRadius="10dp">
 
@@ -16,134 +14,125 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/mercimekTextView"
+            android:id="@+id/detailTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginStart="16dp"
             android:text="Mercimek Çorbası"
             android:textColor="#000000"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/mercimek"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toEndOf="@+id/cardView5"
+            app:layout_constraintTop_toTopOf="@+id/cardView5" />
 
         <ImageView
-            android:id="@+id/correct"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="87dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginBottom="20dp"
+            android:id="@+id/veganCheck"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:src="@drawable/ic_round_check_24"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/fats"
-            app:layout_constraintVertical_bias="0.875" />
+            app:layout_constraintBottom_toBottomOf="@+id/vegan"
+            app:layout_constraintStart_toEndOf="@+id/vegan"
+            app:layout_constraintTop_toTopOf="@+id/vegan" />
 
         <TextView
             android:id="@+id/proteins"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginStart="8dp"
             android:text="Proteins: 14gr"
-            android:textSize="10sp"
-            app:layout_constraintStart_toEndOf="@+id/mercimek"
-            app:layout_constraintTop_toBottomOf="@+id/carbs" />
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/carbs"
+            app:layout_constraintStart_toEndOf="@+id/carbs"
+            app:layout_constraintTop_toTopOf="@+id/carbs" />
 
         <TextView
             android:id="@+id/vegan"
-            android:layout_width="50dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="17dp"
-            android:layout_marginTop="17dp"
-            android:layout_marginBottom="20dp"
-            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="left"
             android:text="Vegan"
             android:textColor="#000000"
-            android:textSize="12sp"
+            android:textSize="14sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/fats"
-            app:layout_constraintVertical_bias="0.45" />
+            app:layout_constraintBottom_toBottomOf="@+id/cardView5"
+            app:layout_constraintStart_toStartOf="@+id/carbs"
+            app:layout_constraintTop_toBottomOf="@+id/carbs" />
 
         <TextView
             android:id="@+id/carbs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="8dp"
             android:text="Carbs: 48gr"
-            android:textSize="10sp"
-            app:layout_constraintStart_toEndOf="@+id/mercimek"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/calorie"
             app:layout_constraintTop_toBottomOf="@+id/calorie" />
 
         <TextView
             android:id="@+id/fats"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginStart="8dp"
             android:text="Fats: 11gr"
-            android:textSize="10sp"
-            app:layout_constraintStart_toEndOf="@+id/mercimek"
-            app:layout_constraintTop_toBottomOf="@+id/proteins" />
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/proteins"
+            app:layout_constraintStart_toEndOf="@+id/proteins"
+            app:layout_constraintTop_toTopOf="@+id/proteins" />
 
         <TextView
             android:id="@+id/calorie"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
             android:layout_marginTop="8dp"
             android:text="Calorie: 285kcal"
-            android:textSize="15sp"
-            app:layout_constraintStart_toEndOf="@+id/mercimek"
-            app:layout_constraintTop_toBottomOf="@+id/mercimekTextView" />
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/detailTitle"
+            app:layout_constraintTop_toBottomOf="@+id/detailTitle" />
 
         <TextView
             android:id="@+id/allergen"
-            android:layout_width="50dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:gravity="center"
             android:text="Allergen"
             android:textColor="#000000"
-            android:textSize="12dp"
+            android:textSize="14sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/correct"
-            app:layout_constraintTop_toBottomOf="@+id/fats"
-            app:layout_constraintVertical_bias="0.875" />
+            app:layout_constraintBottom_toBottomOf="@+id/veganCheck"
+            app:layout_constraintStart_toEndOf="@+id/veganCheck"
+            app:layout_constraintTop_toTopOf="@+id/veganCheck" />
 
         <ImageView
-            android:id="@+id/notCorrect"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
+            android:id="@+id/allergenCheck"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:src="@drawable/ic_red_round_close_24"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/allergen"
             app:layout_constraintStart_toEndOf="@+id/allergen"
-            app:layout_constraintTop_toBottomOf="@+id/fats"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toTopOf="@+id/allergen" />
 
-        <ImageView
-            android:id="@+id/mercimek"
-            android:layout_width="120dp"
-            android:layout_height="150dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="25dp"
-            android:src="@drawable/mercimek"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/proteins"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/detailImg"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="centerCrop"
+                tools:srcCompat="@tools:sample/avatars" />
+        </androidx.cardview.widget.CardView>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
