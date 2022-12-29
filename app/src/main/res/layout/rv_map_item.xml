@@ -76,7 +76,8 @@
                 android:background="#00AA7676"
                 android:minHeight="40dp"
                 android:progress="75"
-                android:progressTint="@color/red"
+                android:progressBackgroundTint="#496073"
+                android:progressTint="#183650"
                 android:scrollbarSize="20dp"
                 android:secondaryProgressTint="#FFFFFF" />
         </androidx.cardview.widget.CardView>

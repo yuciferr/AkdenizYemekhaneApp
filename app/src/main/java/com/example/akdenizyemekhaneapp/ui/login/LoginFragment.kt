@@ -34,6 +34,7 @@ class LoginFragment : Fragment() {
                 binding.password.error = "Enter your password"
             }
             else{
+                Toast.makeText(context, "Welcome Yusuf Samed Çelik", Toast.LENGTH_LONG).show()
                 navigateToHome()
             }
         }

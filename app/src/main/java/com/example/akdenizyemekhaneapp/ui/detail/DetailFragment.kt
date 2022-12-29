@@ -1,6 +1,7 @@
 package com.example.akdenizyemekhaneapp.ui.detail
 
 import android.os.Bundle
+import android.os.Handler
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -81,6 +82,11 @@ class DetailFragment : Fragment() {
         binding.rateButton.setOnClickListener {
             RateDialog().show(parentFragmentManager, "RateDialog")
         }
+
+        Handler().postDelayed({
+            binding.detailRecyclerView.visibility = View.VISIBLE
+            binding.pbDetail.visibility = View.GONE
+        }, 400)
 
     }
 }

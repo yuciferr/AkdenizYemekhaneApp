@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import com.example.akdenizyemekhaneapp.databinding.DialogAddBalanceBinding
+import com.example.akdenizyemekhaneapp.databinding.FragmentHomeBinding
 
 class AddBalanceDialog: DialogFragment() {
 
@@ -25,8 +26,18 @@ class AddBalanceDialog: DialogFragment() {
                 dismiss()
             }
             addButton.setOnClickListener {
-                Toast.makeText(requireContext(), "Balance added!", Toast.LENGTH_SHORT).show()
-                dismiss()
+                if(name.text.toString().isEmpty()){
+                    name.error = "Enter your name"
+                }else if (cardNumber.text.toString().length!= 16){
+                    cardNumber.error = "Enter your card number"
+                } else if (expDate.text.toString().length!= 5){
+                    expDate.error = "Enter your expiration date"
+                } else if (cvc.text.toString().length!= 3){
+                    cvc.error = "Enter your cvc"
+                } else {
+                    Toast.makeText(context, "Your balance is added", Toast.LENGTH_SHORT).show()
+                    dismiss()
+                }
             }
 
         }

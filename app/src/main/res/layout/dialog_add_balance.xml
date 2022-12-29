@@ -35,6 +35,7 @@
             android:inputType="textPersonName"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
+            android:text="Yusuf Samed Çelik"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -48,7 +49,7 @@
             android:background="@drawable/default_btn"
             android:ems="10"
             android:hint="CVC"
-            android:inputType="textPersonName"
+            android:inputType="number"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
             app:layout_constraintEnd_toEndOf="@+id/cardNumber"
@@ -62,9 +63,10 @@
             android:background="@drawable/default_btn"
             android:ems="10"
             android:hint="Exp. Date"
-            android:inputType="textPersonName"
+            android:inputType="number|textPersonName"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
+            android:text="08/28"
             app:layout_constraintStart_toStartOf="@+id/cardNumber"
             app:layout_constraintTop_toBottomOf="@+id/cardNumber" />
 
@@ -76,7 +78,7 @@
             android:background="@drawable/default_btn"
             android:ems="10"
             android:hint="Card Number"
-            android:inputType="textPersonName"
+            android:inputType="number"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -137,62 +139,58 @@
             android:id="@+id/chipGroup2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="@+id/cvc"
             app:layout_constraintStart_toStartOf="@+id/textView2"
-            app:layout_constraintTop_toBottomOf="@+id/textView2">
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:singleLine="true"
+            app:singleSelection="true">
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chip"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:text="30₺"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:textEndPadding="8dp"
-                app:textStartPadding="8dp" />
+                app:textEndPadding="12dp"
+                app:textStartPadding="12dp" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chip2"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:text="50₺"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:textEndPadding="8dp"
-                app:textStartPadding="8dp" />
+                app:textEndPadding="12dp"
+                app:textStartPadding="12dp" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chip3"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="100₺"
+                android:layout_height="50dp"
+                android:text="75₺"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:textEndPadding="8dp"
-                app:textStartPadding="8dp" />
+                app:textEndPadding="12dp"
+                app:textStartPadding="12dp" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chip4"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="120₺"
+                android:layout_height="50dp"
+                android:includeFontPadding="false"
+                android:padding="8dp"
+                android:text="150₺"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:textEndPadding="8dp"
-                app:textStartPadding="8dp" />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chip5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="200₺"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:textEndPadding="8dp"
-                app:textStartPadding="8dp" />
+                app:textEndPadding="12dp"
+                app:textStartPadding="12dp" />
 
         </com.google.android.material.chip.ChipGroup>
 
