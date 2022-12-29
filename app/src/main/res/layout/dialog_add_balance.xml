@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="16dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -13,29 +14,29 @@
             android:id="@+id/textView"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginStart="8dp"
             android:fontFamily="sans-serif"
             android:text="Add to Balance"
             android:textColor="#000000"
             android:textSize="24sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/imageButton"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintBottom_toBottomOf="@+id/balanceClose"
+            app:layout_constraintStart_toEndOf="@+id/balanceClose"
+            app:layout_constraintTop_toTopOf="@+id/balanceClose" />
 
         <EditText
             android:id="@+id/name"
             android:layout_width="350dp"
             android:layout_height="50dp"
-            android:layout_marginStart="30dp"
             android:layout_marginTop="40dp"
             android:background="@drawable/default_btn"
             android:ems="10"
             android:hint="Name"
             android:inputType="textPersonName"
-            android:paddingStart="8dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -43,33 +44,28 @@
             android:id="@+id/cvc"
             android:layout_width="170dp"
             android:layout_height="50dp"
-            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="30dp"
             android:background="@drawable/default_btn"
             android:ems="10"
             android:hint="CVC"
             android:inputType="textPersonName"
-            android:paddingStart="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/expDate"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/cardNumber"
             app:layout_constraintTop_toBottomOf="@+id/cardNumber" />
 
         <EditText
             android:id="@+id/expDate"
-            android:layout_width="170dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="30dp"
+            android:layout_width="167dp"
+            android:layout_height="49dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/default_btn"
             android:ems="10"
             android:hint="Exp. Date"
             android:inputType="textPersonName"
-            android:paddingStart="8dp"
-            app:layout_constraintEnd_toStartOf="@+id/cvc"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            app:layout_constraintStart_toStartOf="@+id/cardNumber"
             app:layout_constraintTop_toBottomOf="@+id/cardNumber" />
 
         <EditText
@@ -81,33 +77,38 @@
             android:ems="10"
             android:hint="Card Number"
             android:inputType="textPersonName"
-            android:paddingStart="8dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/name" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/addButton"
             android:layout_width="120dp"
             android:layout_height="55dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginBottom="40dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/default_btn"
             android:text="Add"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintEnd_toStartOf="@+id/cancelButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chipGroup2" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/cancelButton"
             android:layout_width="120dp"
             android:layout_height="55dp"
-            android:layout_marginStart="100dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginBottom="40dp"
+            android:background="@drawable/default_btn"
             android:text="Cancel"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/addButton"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/addButton" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/addButton"
+            app:layout_constraintTop_toTopOf="@+id/addButton" />
 
         <TextView
             android:id="@+id/textView2"
@@ -122,16 +123,78 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/expDate" />
 
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="20dp"
-            android:background="#FFFFFF"
+        <ImageView
+            android:id="@+id/balanceClose"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_black_round_close_24" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/cvc"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30₺"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:textEndPadding="8dp"
+                app:textStartPadding="8dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="50₺"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:textEndPadding="8dp"
+                app:textStartPadding="8dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100₺"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:textEndPadding="8dp"
+                app:textStartPadding="8dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="120₺"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:textEndPadding="8dp"
+                app:textStartPadding="8dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="200₺"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:textEndPadding="8dp"
+                app:textStartPadding="8dp" />
+
+        </com.google.android.material.chip.ChipGroup>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

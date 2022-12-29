@@ -57,6 +57,16 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         binding.homeRecyclerView.adapter = homeAdapter
         binding.homeRecyclerView.layoutManager = LinearLayoutManager(context)
 
+        binding.apply {
+            addBalance.setOnClickListener{
+                AddBalanceDialog().show(parentFragmentManager, "Add Balance Dialog")
+            }
+            balance.setOnClickListener {
+                AddBalanceDialog().show(parentFragmentManager, "Add Balance Dialog")
+            }
+
+        }
+
     }
 
 }

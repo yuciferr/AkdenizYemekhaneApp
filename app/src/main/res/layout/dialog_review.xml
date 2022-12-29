@@ -23,7 +23,7 @@
             app:cardCornerRadius="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2">
+            app:layout_constraintTop_toBottomOf="@+id/rateClose">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -35,11 +35,12 @@
                     android:layout_height="70dp"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="16dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/kurufasulye"
                     app:layout_constraintEnd_toStartOf="@+id/food2Img"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:srcCompat="@tools:sample/avatars" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/food1"
@@ -53,7 +54,7 @@
                     app:layout_constraintEnd_toEndOf="@+id/food1Img"
                     app:layout_constraintStart_toStartOf="@+id/food1Img"
                     app:layout_constraintTop_toBottomOf="@+id/food1Img"
-                    tools:text="Mercimek \nÇorbası" />
+                    android:text="Kuru Fasulye" />
 
                 <TextView
                     android:id="@+id/food2"
@@ -67,7 +68,7 @@
                     app:layout_constraintEnd_toEndOf="@+id/food2Img"
                     app:layout_constraintStart_toStartOf="@+id/food2Img"
                     app:layout_constraintTop_toBottomOf="@+id/food2Img"
-                    tools:text="Kuru \nFasulye" />
+                    android:text="Pirinç Pilavı" />
 
                 <TextView
                     android:id="@+id/food3"
@@ -81,7 +82,7 @@
                     app:layout_constraintEnd_toEndOf="@+id/food3Img"
                     app:layout_constraintStart_toStartOf="@+id/food3Img"
                     app:layout_constraintTop_toBottomOf="@+id/food3Img"
-                    tools:text="Pirinç \nPilavı" />
+                    android:text="Mevsim Salata" />
 
                 <TextView
                     android:id="@+id/food4"
@@ -95,7 +96,7 @@
                     app:layout_constraintEnd_toEndOf="@+id/food4Img"
                     app:layout_constraintStart_toStartOf="@+id/food4Img"
                     app:layout_constraintTop_toBottomOf="@+id/food4Img"
-                    tools:text="Ayran" />
+                    android:text="Ayran" />
 
                 <ImageView
                     android:id="@+id/food2Img"
@@ -103,11 +104,12 @@
                     android:layout_height="70dp"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="16dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pilav"
                     app:layout_constraintEnd_toStartOf="@+id/food3Img"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/food1Img"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:srcCompat="@tools:sample/avatars" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
                     android:id="@+id/food3Img"
@@ -115,11 +117,12 @@
                     android:layout_height="70dp"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="16dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/salata"
                     app:layout_constraintEnd_toStartOf="@+id/food4Img"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/food2Img"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:srcCompat="@tools:sample/avatars" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
                     android:id="@+id/food4Img"
@@ -128,11 +131,12 @@
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="12dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ayran"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/food3Img"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:srcCompat="@tools:sample/avatars" />
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
@@ -145,9 +149,9 @@
             android:textColor="#000000"
             android:textSize="24sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-            app:layout_constraintStart_toEndOf="@+id/imageView2"
-            app:layout_constraintTop_toTopOf="@+id/imageView2" />
+            app:layout_constraintBottom_toBottomOf="@+id/rateClose"
+            app:layout_constraintStart_toEndOf="@+id/rateClose"
+            app:layout_constraintTop_toTopOf="@+id/rateClose" />
 
         <TextView
             android:id="@+id/review"
@@ -180,39 +184,42 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:progressTint="@color/yellow"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/rate"
             tools:ignore="SpeakableTextPresentCheck" />
 
-        <Button
-            android:id="@+id/button"
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/rateSend"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
+            android:background="@drawable/default_btn"
             android:text="Send"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button2"
+            app:layout_constraintEnd_toStartOf="@+id/rateCancel"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
 
-        <Button
-            android:id="@+id/button2"
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/rateCancel"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="32dp"
+            android:background="@drawable/default_btn"
             android:text="cancel"
-            app:layout_constraintBottom_toBottomOf="@+id/button"
+            app:layout_constraintBottom_toBottomOf="@+id/rateSend"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/button"
-            app:layout_constraintTop_toTopOf="@+id/button" />
+            app:layout_constraintStart_toEndOf="@+id/rateSend"
+            app:layout_constraintTop_toTopOf="@+id/rateSend" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/rateClose"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_marginStart="8dp"
@@ -225,7 +232,7 @@
             android:id="@+id/comment"
             android:layout_width="0dp"
             android:layout_height="150dp"
-            android:layout_marginStart="24dp"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
             android:background="@drawable/review_background"
@@ -235,6 +242,7 @@
             android:lines="5"
             android:minHeight="48dp"
             android:paddingStart="16dp"
+            android:paddingEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/review" />

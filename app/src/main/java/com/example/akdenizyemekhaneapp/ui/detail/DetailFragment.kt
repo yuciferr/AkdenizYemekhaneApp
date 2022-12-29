@@ -79,7 +79,7 @@ class DetailFragment : Fragment() {
         }
 
         binding.rateButton.setOnClickListener {
-            //TODO: Rate button
+            RateDialog().show(parentFragmentManager, "RateDialog")
         }
 
     }
